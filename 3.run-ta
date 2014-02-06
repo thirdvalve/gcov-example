@@ -1,0 +1,1 @@
+cov-analyze --dir idir --strip-path /home/Samples/gcov-example --test-advisor --test-advisor-policy=./example_1-function_100.json

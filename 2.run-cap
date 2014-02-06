@@ -1,0 +1,1 @@
+cov-capture --dir idir --c-coverage=gcov make test

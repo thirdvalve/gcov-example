@@ -1,0 +1,26 @@
+{
+	type: "Coverity test policy definition",
+	format_version: 1,
+
+	rules: [
+    {
+		violation_name: "FUNCTION_IMPACTED_BY_CHANGE",
+		aggregation_granularity: "function",
+		minimum_line_coverage_pct: 100,
+		function_filters: [ 
+			{ min_impacted_date: "2013-04-12" }
+		]
+    },
+    {
+		violation_name: "FUNCTION_CONTAINS_IMPACTED_LINES",
+		aggregation_granularity: "function",
+		minimum_line_coverage_pct: 100,
+		function_filters: [ 
+			{ not: {min_impacted_date: "2013-04-12" } },
+		],
+		line_filters: [
+			{ min_impacted_date: "2013-04-12" },
+		]
+	}
+  ]
+}
